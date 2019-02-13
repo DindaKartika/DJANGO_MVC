@@ -5,7 +5,7 @@ from .forms import PostForm
 
 # Create your views here.
 def blog(request):
-    post = BlogPost.objects.all()
+    post = BlogPost.objects.all().order_by('-tanggal')
     return render(request, 'ATA/blog.html', {'posts':post})
 
 def input(request):
@@ -19,3 +19,7 @@ def input(request):
     else:
         form = PostForm()
     return render(request, 'ATA/input.html', {'form':form})
+
+def blog_page(request, id):
+    post = BlogPost.objects.get(pk=id)
+    return render(request, 'ATA/blog_page.html', {'post':post})
