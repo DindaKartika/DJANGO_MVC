@@ -10,4 +10,4 @@ class BlogPost(models.Model):
     image = models.ImageField(max_length = 255, default="")
     konten = models.TextField(max_length = 1000)
     tanggal = models.DateField(default = timezone.now)
-    comment = models.CharField(max_length = 25)
+    comment = models.CharField(max_length = 25, default="0")
