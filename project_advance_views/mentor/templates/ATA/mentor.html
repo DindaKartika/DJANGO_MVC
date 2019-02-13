@@ -12,35 +12,17 @@
                     <h4>Our Mentor</h4>
                 </div>
             </div>
+            {% for mentor in mentors %}
             <div class="row mentee-content">
                 <div class="col-md-4 col-sm-6 people">
-                    <img src="{% static 'image/people-andreas.png' %}">
+                    <img src="../static/image/{{mentor.image}}">
                 </div>
                 <div class="col-md-8 col-sm-6">
-                    <h5 class="mentors">Andreas Nugroho</h5>
-                    <p class="experience">Software Ninja (5 years experience)</p>
-                    <span>"Great place to learn about programming. Come join us!"</span>
+                    <h5 class="mentors">{{mentor.nama_lengkap}}</h5>
+                    <p class="experience">{{mentor.nick_name}} ({{mentor.experience}} years experience)</p>
+                    <span>"{{mentor.kesan}}"</span>
                 </div>
             </div>
-            <div class="row mentee-content">
-                <div class="col-md-4 col-sm-6 people">
-                    <img src="{% static 'image/people-ramdhan.png' %}">
-                </div>
-                <div class="col-md-8 col-sm-6">
-                    <h5 class="mentors">Ramdhan Hidayat</h5>
-                    <p class="experience">Master of Chaos (10 years experience)</p>
-                    <span>"We make the program with passion, hard work, and heart. Let's go rock with us!"</span>
-                </div>
-            </div>
-            <div class="row mentee-content">
-                <div class="col-md-4 col-sm-6 people">
-                    <img src="{% static 'image/people-trimo.png' %}">
-                </div>
-                <div class="col-md-8 col-sm-6">
-                    <h5 class="mentors">Trimo Leksono</h5>
-                    <p class="experience">Magician (8 years experience)</p>
-                    <span>"The best place for who want to be a great IT talent"</span>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 {% endblock %}

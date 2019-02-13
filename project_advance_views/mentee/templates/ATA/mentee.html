@@ -12,14 +12,14 @@
                     <h4>Our Mentee</h4>
                 </div>
             </div>
-            {% for mentor in mentors %}
+            {% for mentee in mentees %}
             <div class="row mentee-content">
                 <div class="col-md-4 col-sm-6 people">
-                    <img src="../static/image/people-{%">
+                    <img src="../static/image/{{mentee.foto}}">
                 </div>
                 <div class="col-md-8 col-sm-6">
-                    <h5>Steve Jobs</h5>
-                    <span>"I learn so much from Alpha Tech"</span>
+                    <h5>{{ mentee.nama_lengkap }}</h5>
+                    <span>"{{ mentee.kesan }}"</span>
                 </div>
             </div>
             {% endfor %}
