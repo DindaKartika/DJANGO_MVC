@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+        <div class="container section mentee">
+            <div class="row">
+                <div class="col-md-12 title-mentee">
+                    <h4>Our Mentor</h4>
+                </div>
+            </div>
+            <div class="row mentee-content">
+                <div class="col-md-4 col-sm-6 people">
+                    <img src="{% static 'image/people-andreas.png' %}">
+                </div>
+                <div class="col-md-8 col-sm-6">
+                    <h5 class="mentors">Andreas Nugroho</h5>
+                    <p class="experience">Software Ninja (5 years exoerience)</p>
+                    <span>"Great place to learn about programming. Come join us!"</span>
+                </div>
+            </div>
+            <div class="row mentee-content">
+                <div class="col-md-4 col-sm-6 people">
+                    <img src="{% static 'image/people-ramdhan.png' %}">
+                </div>
+                <div class="col-md-8 col-sm-6">
+                    <h5 class="mentors">Ramdhan Hidayat</h5>
+                    <p class="experience">Master of Chaos (10 years experience)</p>
+                    <span>"We make the program with passion, hard work, and heart. Let's go rock with us!"</span>
+                </div>
+            </div>
+            <div class="row mentee-content">
+                <div class="col-md-4 col-sm-6 people">
+                    <img src="{% static 'image/people-trimo.png' %}">
+                </div>
+                <div class="col-md-8 col-sm-6">
+                    <h5 class="mentors">Trimo Leksono</h5>
+                    <p class="experience">Magician (8 years experience)</p>
+                    <span>"The best place for who want to be a great IT talent"</span>
+                </div>
+            </div>
+        </div>
+{% endblock %}

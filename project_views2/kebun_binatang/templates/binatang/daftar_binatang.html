@@ -1,0 +1,77 @@
+{% load static %}
+<html>
+    <head>
+        
+        <link rel = "stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel = "stylesheet" href="{% static 'css/main.css' %}">
+        
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-12 text-center h1 judul">
+                Daftar Binatang
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 text-center gbrhewan">
+                <img src="{% static 'image/panda.jpg' %}" alt="">
+            </div>
+            <div class="col-md-9">
+                <div class="text-center subtitle">
+                    Panda
+                </div>
+                <p>
+                    Panda Raksasa (Ailuropoda melanoleuca, berarti "Kaki-kucing hitam-putih"; Hanzi Sederhana: 大熊猫; 
+                    Hanzi Tradisional: 大熊貓; Mandarin Pinyin: dà xióng māo; Jyutping: daai6 hung4 maau1, berarti 
+                    "kucing beruang besar")[2] atau diringkas Panda, adalah seekor mamalia yang biasanya 
+                    diklasifikasikan ke dalam keluarga beruang,[3] Ursidae, yang merupakan hewan asli Tiongkok Tengah. 
+                    Panda Raksasa tinggal di wilayah pegunungan, seperti Sichuan dan Tibet. Pada setengah abad ke-20 
+                    terakhir, panda menjadi semacam lambang negara Tiongkok, dan sekarang ditampilkan pada uang emas 
+                    negara tersebut.
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3 text-center gbrhewan">
+                <img src="{% static 'image/jerapah.jpeg' %}" alt="">
+            </div>
+            <div class="col-md-9">
+                <div class="text-center subtitle">
+                    Panda
+                </div>
+                <p>
+                    Jerapah atau zarafah (nama ilmiah: Giraffa camelopardalis) adalah mamalia berkuku 
+                    genap endemik Afrika dan merupakan spesies hewan tertinggi yang hidup di darat. 
+                    Jerapah jantan dapat mencapai tinggi 4,8 sampai 5,5 meter dan memiliki berat yang 
+                    dapat mencapai 1.360 kilogram. Jerapah betina biasanya sedikit lebih pendek dan 
+                    lebih ringan.
+                    Jerapah berkerabat dengan rusa dan sapi tetapi dari suku yang berbeda, yaitu 
+                    Giraffidae yang mencakup jerapah sendiri dan kerabat terdekatnya, okapi. Habitat 
+                    aslinya mencakup area dari Chad sampai dengan Afrika Selatan
+                    Nama spesiesnya camelopardalis diambil dari nama dalam latin, karena dianggap 
+                    sebagai bastar unta (camel) dan macan tutul (leopard). Nama camelopardalis dipakai 
+                    oleh Plinius senior dalam ensiklopedia yang ditulisnya. Nama ini juga dipakai 
+                    sebagai nama salah satu rasi bintang. Nama "jerapah" sendiri dipinjam dari nama 
+                    hewan ini dalam bahasa Arab (الزرافة, zirafah). 
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center h1 judul">
+                <a href="{% url 'db_binatang' %}">Daftar Binatang</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center h1 judul">
+                New Post
+            </div>
+            <div class="col-md-12">
+                <form method="POST" class="animal-form">{% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="save btn btn-default">Save</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

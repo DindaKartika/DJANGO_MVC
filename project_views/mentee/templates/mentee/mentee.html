@@ -1,0 +1,39 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+        <div class="container section mentee">
+            <div class="row">
+                <div class="col-md-12 title-mentee">
+                    <h4>Our Mentee</h4>
+                </div>
+            </div>
+            <div class="row mentee-content">
+                <div class="col-md-4 col-sm-6 people">
+                    <img src="{% static 'image/people-2.png' %}">
+                </div>
+                <div class="col-md-8 col-sm-6">
+                    <h5>Steve Jobs</h5>
+                    <span>"I learn so much from Alpha Tech"</span>
+                </div>
+            </div>
+            <div class="row mentee-content">
+                <div class="col-md-4 col-sm-6 people">
+                    <img src="{% static 'image/people-3.png' %}">
+                </div>
+                <div class="col-md-8 col-sm-6">
+                    <h5>Larry Page</h5>
+                    <span>"Great place to learn about programming"</span>
+                </div>
+            </div>
+            <div class="row mentee-content">
+                <div class="col-md-4 col-sm-6 people">
+                    <img src="{% static 'image/people-1.png' %}">
+                </div>
+                <div class="col-md-8 col-sm-6">
+                    <h5>Steve Jobs</h5>
+                    <span>"The best place for who want to be a great IT talent"</span>
+                </div>
+            </div>
+        </div>
+{% endblock %}
