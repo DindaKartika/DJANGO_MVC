@@ -2,26 +2,29 @@
 {% load static %}
 
 {% block title %}
-<title>Details</title>
+<title>Blog - Alpha Tech Academy</title>
 {% endblock %}
 
 {% block content %}
-        <div class="container section details">
+        <div class="container section">
             <div class="row main-content">
-                <div class="col-md-12 ">
-                    <div class="detail">
-                        <img src="{{post.gambar.url}}">
-                        <br>
-                        <span class="konten">{{post.nama}}</span>
-                        <br>
-                        <span style="color: greenyellow" class="konten">Rp {{post.harga}},00</span>
-                        <br>
-                        <span class="konten"><strong>Detail:</strong></span>
-                        <br>
-                        <span class="konten">{{post.keterangan}}</span>
-                        <br>
-                        <a href="{% url 'blog' %}" class="konten">Kembali</a>
-                    </div>
+                <div class="col-md-12 image">
+                    <img src="../static/image/{{ post.image }}">
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <span>{{post.tanggal}}</span>
+                </div>
+                <div class="col-md-6 col-sm-12 comment">
+                    <span>{{post.comment}} Comments</span>
+                </div>
+                <div class="col-md-12">
+                    <h3>{{post.judul}}</h3>
+                </div>
+                <div class="col-md-12">
+                    <p>{{post.konten}}</p>
+                </div>
+                <div class="col-md-12">
+                    <a href="{% url 'blog' %}">Kembali</a>
                 </div>
             </div>
         </div>

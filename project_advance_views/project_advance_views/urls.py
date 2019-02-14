@@ -20,7 +20,11 @@ from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('index.urls')),
     path('', include('blog.urls')),
+    path('', include('mentor.urls')),
+    path('', include('mentee.urls')),
+    path('', include('author.urls'))
 ]
 
 urlpatterns +=staticfiles_urlpatterns()
